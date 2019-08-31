@@ -1,6 +1,6 @@
-body {
+html body {
     font-family: 'Ubuntu:400', sans-serif;
-    width: 100vw;
+    margin: 0px;
 }
 
 .bg-container{
@@ -43,4 +43,29 @@ body {
     font-family: 'Ubuntu', sans-serif; 
     font-weight: 700;
     color: white;
+}
+
+.vanish-date{
+    float: right;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    visibility: visible;
+}
+
+.my-card{
+    width: 20vw; 
+    margin: auto;
+    box-shadow: 5px 10px 20px gray;
+}
+
+.my-card:hover{
+    border-radius: 30px;
+    width: 22vw;
+    transition: width 1s;
+}
+
+.my-card:hover .vanish-date{
+    visibility: hidden;
 }

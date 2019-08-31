@@ -2,7 +2,10 @@
 <html>
     <head>
         <title>KZILLA First Project</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="generator" content="Webflow">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
@@ -10,10 +13,10 @@
       rel="stylesheet">
     </head>
     <body>
-        <div class="container-fluid bg-container">
-            <div class="navbar navbar-expand-sm navbar-dark" 
-                style="background-color: #1f36cf;">
-                <ul class="navbar-nav" style="margin: auto;">
+        <div class="container-fluid bg-container" style="max-width:100vw;margin: 0px;">
+            <div class="navbar navbar-expand-sm justify-content-center" 
+                style="background-color: #1f36cf;max-width:100vw;">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a>Home</a></li>
                     <li class="nav-item"><a>Services</a></li>
                     <li class="nav-item"><a>Our Work</a></li>
@@ -29,6 +32,15 @@
             <div class="row">
                 <h1 class="title">The First Attempt</h1>
             </div>
+            <br><br>
+                <div class="card my-card">
+                    <img class="card-img-top" src="burger.jpg" alt="Card image" style="width:100%;padding: 10px;">
+                    <div class="card-img-overlay">
+                        <span class="card-text vanish-date" id="remove-date">31 August 2019</span>
+                    </div>
+                    <div class="card-body">This is a sample card to replicate the content from WIX. This burger represents my hunger as I was hungry when doing this :')</div> 
+                </div>
         </div>
+        
     </body>
 </html>
