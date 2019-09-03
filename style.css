@@ -1,0 +1,55 @@
+html{
+    font-size: 20px;
+}
+
+.navbar-nav{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-item{
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.welcome-image{
+    background-image: url("background-r.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vanish-date{
+    visibility: visible;
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+.info-card{
+    margin-top: 20px;
+    box-shadow: 5px 10px 20px gray;
+}
+
+.info-card:hover{
+    border-radius: 30px;
+    width: 25%;
+    transition: width 1s;
+    box-shadow: 0px 0px;
+    border: 5px solid darkslateblue;
+}
+
+.info-card:hover .info-image{
+    border-radius: 30px;
+}
+
+.info-card:hover .vanish-date{
+    visibility: hidden;
+}
