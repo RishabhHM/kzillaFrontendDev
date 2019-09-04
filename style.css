@@ -29,6 +29,13 @@ body{
     background-position: center;
 }
 
+.headline {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    text-align: center;
+}
+
 .info-background{
     background-image: url("info-background.jpg");
     background-repeat: no-repeat;
