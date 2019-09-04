@@ -1,4 +1,4 @@
-html{
+body{
     font-size: 20px;
 }
 
@@ -16,14 +16,26 @@ html{
 .row {
     margin-left: 0px;
     margin-right: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .welcome-image{
     background-image: url("background-r.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    /*Parallax Effects*/
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.info-background{
+    background-image: url("info-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*Parallax Effects*/
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .vanish-date{
@@ -35,6 +47,7 @@ html{
 
 .info-card{
     margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 5px 10px 20px gray;
 }
 
