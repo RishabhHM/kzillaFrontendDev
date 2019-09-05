@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To-Do App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="generator" content="Webflow">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>To-Do App</h1>
+        <br>
+        <form class="input-form">
+            <input class="input-text" type="text" autocomplete="off">
+            <button type="submit" class="btn btn-success">Create Item</button>
+        </form>
+        <br>
+        <h3>Need To Do</h3>
+        <ul class="todo-list"></ul>
+    </body>
+    <script>
+        let inputForm = document.getElementsByClassName("input-form").item(0)
+        let inputText = document.getElementsByClassName("input-text").item(0)
+        let todoList = document.getElementsByClassName("todo-list").item(0)
+
+        inputForm.addEventListener("submit", (event) => {
+            event.preventDefault()
+            addEntry(inputText.value)
+        })
+
+        function addEntry(value) {
+            let code = `<li>${value} <button class="btn btn-danger" onclick="deleteEntry(this)">Delete</button></li>`
+            todoList.insertAdjacentHTML("beforeend", code)
+            inputText.value=""
+            inputText.focus()
+        }
+
+        function deleteEntry(element) {
+            element.parentElement.remove()
+        }
+    </script>
+</html>
