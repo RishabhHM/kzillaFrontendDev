@@ -14,7 +14,7 @@
     </head>
     <body>
         <!--Navbar-->
-        <div class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+        <div class="navbar fixed-top navbar-expand-md navbar-light bg-light" style="box-shadow: 5px 0px 10px gray;">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,7 +23,7 @@
                         <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link disabled" href="#">Our Team</a>
                         <a class="nav-item nav-link disabled" href="#">Projects</a>
-                        <a class="nav-item nav-link disabled" href="#">Contact Us</a>
+                        <a class="nav-item nav-link active" href="#contact">Contact Us</a>
                     </div>
                 </div>
         </div>
@@ -41,21 +41,21 @@
         <div class="info-background">
             <div class="row justify-content-around" style="margin-top: 0px;">
                 <div class="card info-card col-12 col-sm-10 col-md-8 col-lg-3">
-                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image" style="width:100%;padding: 10px;">
+                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image">
                     <div class="card-img-overlay">
                         <span class="card-text vanish-date">1 October 2019</span>
                     </div>
                     <div class="card-body">Milestone 1 Date</div> 
                 </div>
-                <div class="card info-card col-12 col-sm-12 col-md-8 col-lg-3">
-                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image" style="width:100%;padding: 10px;">
+                <div class="card info-card col-12 col-sm-10 col-md-8 col-lg-3">
+                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image">
                     <div class="card-img-overlay">
                         <span class="card-text vanish-date">10 October 2019</span>
                     </div>
                     <div class="card-body">Milestone 2 Date</div> 
                 </div>
                 <div class="card info-card col-12 col-sm-10 col-md-8 col-lg-3">
-                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image" style="width:100%;padding: 10px;">
+                    <img class="card-img-top info-image" src="hackathon.jpg" alt="Card image">
                     <div class="card-img-overlay">
                         <span class="card-text vanish-date">20 October 2019</span>
                     </div>
@@ -64,14 +64,14 @@
             </div>
             <div class="row justify-content-around">
                 <div class="card info-card col-12 col-sm-10 col-md-8 col-lg-3">
-                    <img class="card-img-top info-image" src="he_logo.png" alt="Card image" style="width:100%;padding: 10px;">
+                    <img class="card-img-top info-image" src="he_logo.png" alt="Card image">
                     <div class="card-img-overlay">
                         <span class="card-text vanish-date">11 October 2019</span>
                     </div>
                     <div class="card-body">Event Banner 1</div> 
                 </div>
-                <div class="card info-card col-12 col-sm-12 col-md-8 col-lg-3">
-                    <img class="card-img-top info-image" src="he_logo.png" alt="Card image" style="width:100%;padding: 10px;">
+                <div class="card info-card col-12 col-sm-10 col-md-8 col-lg-3">
+                    <img class="card-img-top info-image" src="he_logo.png" alt="Card image">
                     <div class="card-img-overlay">
                         <span class="card-text vanish-date">12 October 2019</span>
                     </div>
@@ -79,5 +79,48 @@
                 </div>
             </div>
         </div>
+
+        <!--Contact Us Form-->
+        <div class="contact-back">
+        <div class="contact-form col-12 col-sm-10 col-md-6 offset-0 offset-sm-1 offset-md-3" id="contact">
+            <h2 style="text-align: center;">Contact Us!</h3>
+            <form class="main-form">
+                <div class="form-group">
+                  <label class="sr-only" for="fname">First Name:</label>
+                  <input type="text" class="form-control" id="fname" placeholder="Enter your First Name"  name="fname">
+                </div>
+                <div class="form-group">
+                  <label class="sr-only" for="lname">Last Name:</label>
+                  <input type="text" class="form-control" id="lname" placeholder="Enter your Last Name" name="lname">
+                </div>
+                <div class="form-group">
+                        <label class="sr-only" for="phone">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Enter your Phone Number" name="phone">
+                      </div>
+                <div class="form-actions">
+                    <center><button type="submit" class="btn btn-primary"><b>Submit</b></button></center>
+                </div>
+            </form>
+        </div>
+        </div>
     </body>
+    <script>
+        let mainForm = document.getElementsByClassName("main-form").item(0)
+        let fname = document.getElementById("fname")
+        let lname = document.getElementById("lname")
+        let phone = document.getElementById("phone")
+
+        mainForm.addEventListener("submit", (event) => {
+            event.preventDefault()
+            contactFunction(fname.value,lname.value,phone.value)
+            fname.value=""
+            lname.value=""
+            phone.value=""
+            fname.focus()
+        })
+
+        function contactFunction(fname,lname,phone){
+            alert (`Hello ${fname} ${lname}! We shall call you soon at ${phone}`)
+        }
+    </script>
 </html>
